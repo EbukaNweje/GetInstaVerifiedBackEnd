@@ -1,9 +1,6 @@
 const port = 1000
 const mongoose = require("mongoose")
 const dotenv = require("dotenv")
-const cors = require("cors");
-
-
 dotenv.config({path: "./config/config.env"})
 const Db = process.env.DATABASE
 
@@ -15,7 +12,6 @@ mongoose.connect(Db, {
 })
 
 const app = require("./App")
-app.use(cors());
 // console.log(cors({origin: "*"}))
 
 app.listen(port, ()=>{
