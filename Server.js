@@ -15,5 +15,5 @@ const app = require("./App")
 // console.log(cors({origin: "*"}))
 
 app.listen(port, ()=>{
-    console.log(`App is Listing to port ${port}`)
+    console.log(`Connwcted`)
 })
