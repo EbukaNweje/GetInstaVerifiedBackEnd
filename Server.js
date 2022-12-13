@@ -1,4 +1,3 @@
-const port = 1000
 const mongoose = require("mongoose")
 const dotenv = require("dotenv")
 dotenv.config({path: "./config/config.env"})
@@ -14,6 +13,6 @@ mongoose.connect(Db, {
 const app = require("./App")
 // console.log(cors({origin: "*"}))
 
-app.listen(port, ()=>{
+app.listen(process.env.PORT || 5000, ()=>{
     console.log(`Connwcted`)
 })
