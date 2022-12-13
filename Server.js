@@ -14,5 +14,5 @@ const app = require("./App")
 // console.log(cors({origin: "*"}))
 
 app.listen(process.env.PORT || 5000, ()=>{
-    console.log(`Connwcted`)
+    console.log(`connected`)
 })
