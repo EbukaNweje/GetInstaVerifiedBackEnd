@@ -66,10 +66,8 @@ exports.UpdatePayment = async (req, res) =>{
 exports.DeletePayment = async (req, res) =>{
     try{
         const id = req.params.id
-        await GetVerify.findByIdAndUpdate(id)
-        res.status(204).json({
-            message: "Payment Updated Successfuly",
-        })
+        await GetVerify.findByIdAndDelete(id)
+        res.status(204)
     }
     catch (err) {
         res.status(400).json({
